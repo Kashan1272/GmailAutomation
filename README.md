@@ -50,10 +50,10 @@ A powerful, user-friendly email automation system built with Python, Gmail API, 
    git clone https://github.com/yourusername/gmail-automation-dashboard.git
    cd gmail-automation-dashboard
 
-2. ##install dependencies
+2. ### install dependencies
    pip install -r requirements.txt
 
-3.#setup Google cloud console
+3. ### setup Google cloud console
 Set up Google Cloud Platform
 Go to Google Cloud Console
 Create a new project
@@ -61,13 +61,20 @@ Enable Gmail API
 Create OAuth 2.0 credentials (Desktop app)
 Download credentials.json and place it in the project root
 
-3. Add test user (for development)
+3. ###  Add test user (for development)
 Go to OAuth consent screen
 Add your email as a test user
 Run the application
-bash
 
-*##*Project structure
+### bash
+streamlit run app.py
+
+### Access the dashboard
+Open browser to http://localhost:8501
+Click "Connect Gmail" and authorize
+Start sending emails!
+
+ ### Project structure
 gmail-automation/
 ├── app.py                  # Main Streamlit application
 ├── config.py               # Configuration settings
@@ -82,83 +89,93 @@ gmail-automation/
 └── logs/
     └── email_history.csv   # Email send history
 
-🎯 Usage Guide
-Connecting Gmail
-Launch the app: streamlit run app.py
-Click "🔐 Connect Gmail" in the sidebar
-Authorize the application in the browser popup
-You're connected! ✅
-Sending Manual Emails
-Go to "📤 Send Manual" tab
-Fill in recipient, subject, and body
-Or use Quick Templates:
-📝 Daily Report
-🔔 Reminder
-📊 Weekly Summary
-Click "🚀 Send Email Now"
-Scheduling Emails
-Go to "⏰ Schedule Manager" tab
-Click "➕ Add New Scheduled Email"
-Set time, recipient, subject, and body
-Click "✅ Add Schedule"
-Go to sidebar and click "▶️ Start" to activate scheduler
-Viewing History
-Go to "📊 Email History" tab
-Filter by status (All/Success/Error)
-Search by recipient or subject
-Download as CSV for reporting
-Monitoring Activity
+### 🎯 Usage Guide
+1. Connecting Gmail
+2. Launch the app: streamlit run app.py
+3. Click "🔐 Connect Gmail" in the sidebar
+4. Authorize the application in the browser popup
+5. You're connected! ✅
+
+### sending
+1. Sending Manual Emails
+2. Go to "📤 Send Manual" tab
+3. Fill in recipient, subject, and body
+4. Or use Quick Templates:
+5. 📝 Daily Report
+6. 🔔 Reminder
+7. 📊 Weekly Summary
+8. Click "🚀 Send Email Now"
+
+### Scheduling Emails
+1. Go to "⏰ Schedule Manager" tab
+2. Click "➕ Add New Scheduled Email"
+3. Set time, recipient, subject, and body
+4. Click "✅ Add Schedule"
+5. Go to sidebar and click "▶️ Start" to activate scheduler
+
+### Viewing History
+1. Go to "📊 Email History" tab
+2. Filter by status (All/Success/Error)
+3. Search by recipient or subject
+4. Download as CSV for reporting
+   
+### Monitoring Activity
 Go to "📜 Live Logs" tab
 Enable "🔄 Auto-refresh" for real-time updates
 View scheduler activity and email sends
 Clear logs when needed
 
-🔐 Security Notes
-Never commit credentials.json or token.json to version control
-Add them to .gitignore (already included)
-Use environment variables for sensitive data in production
-Keep your Google Cloud project in "Testing" mode during development
-📦 Dependencies
-streamlit - Web interface
-google-api-python-client - Gmail API access
-google-auth-oauthlib - OAuth 2.0 authentication
-google-auth-httplib2 - HTTP transport
-schedule - Task scheduling
-pandas - Data handling and CSV export
-🐛 Troubleshooting
-"Access blocked" error
-Add your email as a test user in Google Cloud Console
-Ensure Gmail API is enabled
-"UnicodeEncodeError"
-Delete live_logs.txt and restart
-Files now use UTF-8 encoding
-Email not appearing in history
-Check logs/email_history.csv exists
-Verify setup_logger() is called
-Check file permissions
-Scheduler not running
-Ensure Gmail is connected
-Click "▶️ Start" in sidebar
-Check schedules are marked as "Active"
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
-Fork the repository
-Create a feature branch: git checkout -b feature/AmazingFeature
-Commit changes: git commit -m 'Add AmazingFeature'
-Push to branch: git push origin feature/AmazingFeature
-Open a Pull Request
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-👨‍💻 Author
-Your Name
-GitHub: @kashan1272
-Email: chandkhan199014@gmail.com
-🙏 Acknowledgments
-Google Gmail API
-Streamlit team for the amazing framework
-All contributors and users
-📬 Support
+### 🔐 Security Notes
+1. Never commit credentials.json or token.json to version control
+2. Add them to .gitignore (already included)
+3. Use environment variables for sensitive data in production
+4. Keep your Google Cloud project in "Testing" mode during development
+
+### 📦 Dependencies
+1. streamlit - Web interface
+2. google-api-python-client - Gmail API access
+3. google-auth-oauthlib - OAuth 2.0 authentication
+4. google-auth-httplib2 - HTTP transport
+5. schedule - Task scheduling
+6. pandas - Data handling and CSV export
+
+### 🐛 Troubleshooting
+1. "Access blocked" error
+2. Add your email as a test user in Google Cloud Console
+3. Ensure Gmail API is enabled
+
+### "UnicodeEncodeError"
+1. Delete live_logs.txt and restart
+2. Files now use UTF-8 encoding
+3. Email not appearing in history
+4. Check logs/email_history.csv exists
+5. Verify setup_logger() is called
+6. Check file permissions
+7. Scheduler not running
+8. Ensure Gmail is connected
+9. Click "▶️ Start" in sidebar
+10. Check schedules are marked as "Active"
+
+### 🤝 Contributing
+1. Contributions are welcome! Please follow these steps:
+2. Fork the repository
+3. Create a feature branch: git checkout -b feature/AmazingFeature
+4. Commit changes: git commit -m 'Add AmazingFeature'
+5. Push to branch: git push origin feature/AmazingFeature
+6. Open a Pull Request
+
+### 👨‍💻 Author
+1. Kashan Abid Magasi
+2. GitHub: @kashan1272
+3. Email: chandkhan199014@gmail.com
+
+### 🙏 Acknowledgments
+1. Google Gmail API
+2. Streamlit team for the amazing framework
+3. All contributors and users
+
+### 📬 Support
 For issues and questions:
-Open an issue on GitHub
-Email: chandkhan199014@gmail.com
-Made with ❤️ using Python & Streamlit
+1. Open an issue on GitHub
+2. Email: chandkhan199014@gmail.com
+3. Made with ❤️ using Python & Streamlit
