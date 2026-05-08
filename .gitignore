@@ -1,0 +1,23 @@
+# 🔐 NEVER COMMIT THESE
+credentials.json
+token.json
+
+# 📝 Logs & Generated Files
+logs/
+live_logs.txt
+schedules.json
+email_history.csv
+
+# 🐍 Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+#  IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
